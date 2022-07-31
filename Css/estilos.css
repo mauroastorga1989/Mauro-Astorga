@@ -1,0 +1,364 @@
+@import url();
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.html{
+    font-size: 62.5%;
+}
+
+header{
+    background-color: rgb(80, 60, 58);
+    height: 230px;  
+}
+header img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+header h1{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    text-transform: uppercase;
+    background-color: rgba(47, 79, 79, 0.404); 
+    border: inset;
+    animation-name: tituloprincipal;
+    animation-duration: 5s;
+    animation-delay: 2s; 
+    position: relative;
+    animation-iteration-count: infinite;
+}
+    
+@keyframes tituloprincipal{
+    0% {background-color:rgba(47, 79, 79, 0.404) ; 
+    }
+    50% {background-color: rgb(218, 39, 16)
+    }
+    100% {background-color: black}
+}
+
+header nav{
+    margin: 30px;
+    width: 100%;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    list-style: none;
+    font-size: .9rem;
+    text-transform: uppercase;   
+}
+header nav ul a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 1.0rem;
+}
+
+header a:hover{
+    background-color: black;
+    transition: 0.4s;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border-bottom: double;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;   
+}
+
+.main{
+    margin: auto;
+    background-color: black;
+    height: 400px;
+}
+
+footer {
+    width: 100%;
+    height: 450px;
+    align-items: center;
+    background-color: #181716; }
+    footer h3 {
+      color: white;
+      display: flex;
+      justify-content: center;
+      font-size: 25px;
+      margin-bottom: 10px; }
+    footer .contenedor__iconos {
+      width: 80%;
+      height: 30%;
+      margin: auto;
+      background-color: #6b5339;
+      display: flex;
+      justify-content: center; }
+      footer .contenedor__iconos .social__bar {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin: 20px;
+        border-radius: 50%;
+        transition: all .8s;
+        display: flex;
+        cursor: pointer; }
+      footer .contenedor__iconos .social__bar:hover {
+        background-color: #e60073;
+        box-shadow: 0 0 20px #e60073; }
+      footer .contenedor__iconos .social__bar:hover:nth-child(2) {
+        background-color: #270992;
+        box-shadow: 0 0 20px #270992; }
+      footer .contenedor__iconos .social__bar:hover:nth-child(3) {
+        background-color: #06a729;
+        box-shadow: 0 0 20px #06a729; }
+      footer .contenedor__iconos .social__bar:hover:nth-child(4) {
+        background-color: #df0f0f;
+        box-shadow: 0 0 20px #df0f0f; }
+      footer .contenedor__iconos .social__bar:hover:nth-child(5) {
+        background-color: #2378bd;
+        box-shadow: 0 0 20px #2378bd; }
+      footer .contenedor__iconos i {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.7rem; }
+    footer .listas {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 10px; }
+      footer .listas li:hover {
+        color: white;
+        transition: .8s;
+        cursor: pointer; }
+    footer p {
+      color: white;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      font-size: 17px; }
+
+
+.main__galeria{
+    background-image: url(../assets/imagenes/14-140131_camouflage-wallpaper-hd.jpg);
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
+    margin-top: 0px;    
+}
+.titulo__galeria{
+    width: 600px;
+    height: 60px;
+    border-style: ridge;
+    display: flex;
+    color: azure;
+    font-size: 45px; 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: rgba(29, 53, 29, 0.527);
+    border-radius: 15px;
+}
+#imagenes__galeria{
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ width: 95%;
+ grid-gap: 10px;
+ margin: auto;
+ overflow: hidden;
+ padding: 50px 0;
+}
+.imagenes__galeria img{
+    width: 100%;
+    object-fit: cover;
+    vertical-align: top;
+    height: 300px;
+}
+.imagenes__individuales{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6 rgb(0, 0, 0, .5); 
+    width: 100%;   
+}
+#imagenes__galeria a:hover img{
+    transform: scale(1.3);
+    transition: 1s;
+}
+.light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, .5);
+    transition: transform .8s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+.light-box img{
+    width: 60vw;
+    height: 40vw;
+}
+.light-box:target{
+    transform: scale(1);
+}
+.close{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: rgb(19, 7, 70);
+    color: white;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    line-height: 40px;
+    border-style: groove;
+}
+.next{
+    display: block;
+    background-color: rgb(19, 7, 70);
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    text-align: center;
+}
+.main__novedades{
+    background-image: url(../assets/imagenes/14-140131_camouflage-wallpaper-hd.jpg);
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.novedades__parrafo{
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    text-align: end;
+    margin: 30px;
+    padding: 10px;
+}
+.novedades__elementos{
+    text-align: center;
+}
+
+
+.main__contacto{
+    background-image: url(../assets/imagenes/14-140131_camouflage-wallpaper-hd.jpg);
+    height: 1800px;
+    background-size: cover;
+    text-align: center;
+}
+.titulo__contacto{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    color: aliceblue;
+}
+.contacto__form{
+    background-color: rgba(10, 39, 10, 0.589);
+    height: 620px;
+    width: 800px;
+    margin: auto;
+    border-radius: 10px;
+}
+.nombre,.correo,.telefono,.mensaje{
+    width: 75%;
+    margin-bottom: 5px;
+    padding: 7px;
+    font-size: 15px;
+    border: none;
+}
+.botones{
+    height: 100px;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.boton1{
+    font-size: 12px;
+    color: white;
+    background-color: black;
+    height: 30px;
+    width: 400px;
+    cursor: pointer;
+}
+.boton2{
+    font-size: 12px;
+    color: white;
+    background-color: black;
+    height: 30px;
+    width: 400px;
+    cursor: pointer;  
+}
+.terminos{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: darkgrey;
+}
+.terminos__parrafo{
+    margin-top: 50px;
+    font-size: 18px;
+    color: white;
+}
+.main__nosotros{
+    background-image: url(../assets/imagenes/60638-soldados.jpg);
+    height: 1800px;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.titulo__nosotros{
+    background-color: rgba(56, 56, 80, 0.493);
+    margin-top: 60px;
+    margin-left: 100px;
+    width: 800px;
+    height: 60px;
+    border-bottom: double;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border: double;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 50px;
+    color: azure;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.parrafo__nosotros{
+    border-radius: 15px;
+    background-color: rgba(56, 56, 80, 0.493);
+    margin-left: 100px;
+    width: 800px;
+    height: 550px;
+    border: double;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: azure;
+    text-align: center;
+}
+.imagen__nosotros{
+    margin-top: 50px;
+    border-style: groove;
+    padding: 5px;
+    width: 1000px;
+    height: 600px;  
+}

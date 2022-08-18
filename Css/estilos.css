@@ -42,7 +42,7 @@ header h1{
 @keyframes tituloprincipal{
     0% {background-color:rgba(47, 79, 79, 0.404) ; 
     }
-    50% {background-color: rgb(218, 39, 16)
+    50% {background-color: rgb(121, 15, 1)
     }
     100% {background-color: black}
 }

@@ -3,7 +3,7 @@
 let instrumentoMusical = 187000
 
 // El usuario selecciona la cantidad de cuotas por prompt y ese numero se almacena en nuestr variable
-let cuotasSeleccionadas = +prompt("Ingrese numero de cuotas");
+let cuotasSeleccionadas = parseInt(prompt("Ingrese numero de cuotas"));
 console.log("el usuario quiere:" + cuotasSeleccionadas + " cuotas.");
 
 
